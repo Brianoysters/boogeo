@@ -175,12 +175,21 @@
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 1rem;
+/* Standard sizing for project images */
+.project-img {
+    width: 100%; /* Makes the image responsive within its container */
+    height: 350px; /* Standard height */
+    object-fit: cover; /* Ensures the image scales proportionally and fills the container */
+    border-radius: 10px; /* Optional: adds rounded corners for a polished look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+    transition: transform 0.3s ease; /* Smooth hover effect */
 }
+
+/* Hover effect for project images */
+.project-img:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+}
+
 
 .project-details h3 {
     font-size: 1.5rem;
@@ -201,6 +210,7 @@
         font-size: 1rem;
     }
 }
+
 /* Team Members */
 .team-members {
     display: flex;
